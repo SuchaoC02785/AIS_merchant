@@ -1,16 +1,21 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  String
+Library  DateTime
 Library  customKeyword.py
 Resource  variable/global_variable.robot
 
 *** Test Case ***
 
-Edit merchant profile ui of thai-juristic
+Edit merchant profile ui of fo-juristic
     # [Tags]    merchant profile ui th_ju  success
-     [Template]  Edit merchant profile ui of thai-juristic
-    # |username             password    Merchant Name        title              mer_short_name      shopkeeperName    ProductNme                        businessType                        selectProdutType                latitude         longtitude      email                    webUrl                 registerId        tax    authorizedPerson0    authorizedPersonId0      authorizedPersonAddress0    authorizedPerson1    authorizedPersonId1      authorizedPersonAddress1     Merchant NameN   titleN        mer_short_nameN    shopkeeperNameN   ProductNmeN     businessTypeN                        selectProdutTypeN    latitudeN  longtitudeN           emailN                  webUrlN               registerIdN    taxN    authorizedPerson0    authorizedPersonId0      authorizedPersonAddress0N   authorizedPerson1N    authorizedPersonId1N    authorizedPersonAddress1N
-    ubold@coderthemes.com   test    chao1                    ${EMPTY}           ${EMPTY}            ${EMPTY}          ${EMPTY}                         ${EMPTY}                             ${EMPTY}                        ${EMPTY}         ${EMPTY}        ${EMPTY}                 ${EMPTY}               ${EMPTY}        tax4     ${EMPTY}            ${EMPTY}                    ${EMPTY}                  ${EMPTY}            ${EMPTY}                    ${EMPTY}                    bow shopnew        มูลนิธิ       โบวี่              นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย         ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          107.0        100.0           vitgointer@test.com     www.vitgointer.com     105549050730    tax1   Saan                   1111111111111            12/12                       John                2222222222              13/13
+     [Template]  Edit merchant profile ui of fo-juristic
+
+    # |username             password    Merchant Name            title     mer_short_name      shopkeeperName    ProductNme                     businessType                        selectProdutType                    email                   webUrl      authorizedPerson0    authorizedPersonId0      authorizedPersonAddress0    authorizedPerson1    authorizedPersonId1      authorizedPersonAddress1      Merchant NameN   titleN   mer_short_nameN    shopkeeperNameN  ProductNmeN     businessTypeN                        selectProdutTypeN      emailN                  webUrlN                 authorizedPerson0    authorizedPersonId0      authorizedPersonAddress0N   authorizedPerson1N    authorizedPersonId1N    authorizedPersonAddress1N
+    ubold@coderthemes.com   test        bow shop                 ${EMPTY}    ${EMPTY}            ${EMPTY}       ${EMPTY}                         ${EMPTY}                            ${EMPTY}                         ${EMPTY}                ${EMPTY}          ${EMPTY}            ${EMPTY}                ${EMPTY}                        ${EMPTY}            ${EMPTY}                ${EMPTY}                  bow shopnew      มูลนิธิ      โบวี่                 นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย    ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          vitgointer@test.com     www.vitgointer.com          Saan                   1111111111111            12/12                       John                2222222222              13/13
+
+
+    #  ubold@coderthemes.com   test    Nine shop                    ${EMPTY}           ${EMPTY}            ${EMPTY}          ${EMPTY}                         ${EMPTY}                             ${EMPTY}                        ${EMPTY}         ${EMPTY}        ${EMPTY}                 ${EMPTY}               ${EMPTY}        tax4     ${EMPTY}            ${EMPTY}                    ${EMPTY}                  ${EMPTY}            ${EMPTY}                    ${EMPTY}                    bow shopnew        มูลนิธิ       โบวี่              นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย         ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          107.0        100.0           vitgointer@test.com     www.vitgointer.com     105549050730    tax1   Saan                   1111111111111            12/12                       John                2222222222              13/13
     # ubold@coderthemes.com   test    2222                    ${EMPTY}           ${EMPTY}            ${EMPTY}          ${EMPTY}                         ${EMPTY}                             ${EMPTY}                        ${EMPTY}         ${EMPTY}        ${EMPTY}                 ${EMPTY}               ${EMPTY}        tax3     bow shopnew        คุณ       โบวี่              นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย         ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          107.0        100.0           vitgointer@test.com     www.vitgointer.com      105549050730    tax2
     # ubold@coderthemes.com   test    3333                    ${EMPTY}           ${EMPTY}            ${EMPTY}          ${EMPTY}                         ${EMPTY}                             ${EMPTY}                        ${EMPTY}         ${EMPTY}        ${EMPTY}                 ${EMPTY}               ${EMPTY}        tax2     bow shopnew        คุณ       โบวี่              นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย         ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          107.0        100.0           vitgointer@test.com     www.vitgointer.com      105549050730    tax3
     # ubold@coderthemes.com   test    4444                    ${EMPTY}           ${EMPTY}            ${EMPTY}          ${EMPTY}                         ${EMPTY}                             ${EMPTY}                        ${EMPTY}         ${EMPTY}        ${EMPTY}                 ${EMPTY}               ${EMPTY}        tax1     bow shopnew        คุณ       โบวี่              นางสาวสุนิตา ลีติกุล  การบำบัดน้ำเสีย         ธุรกิจเกี่ยวกับสิ่งแวดล้อมและการบำบัดน้ำเสีย    อสังหาริมทรัพย์          107.0        100.0           vitgointer@test.com     www.vitgointer.com      105549050730    tax4
@@ -20,19 +25,19 @@ Edit merchant profile ui of thai-juristic
 
                
 *** Keyword ***
-Edit merchant profile ui of thai-juristic
-    [Arguments]   ${username}   ${password}   ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${latitude}    ${longtitude}    ${email}    ${webUrl}    ${registerId}    ${tax}   ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}    ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${latitudeN}    ${longtitudeN}    ${emailN}    ${webUrlN}    ${registerIdN}    ${taxN}    ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
+Edit merchant profile ui of fo-juristic
+    [Arguments]   ${username}   ${password}   ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}    ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}    ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${emailN}    ${webUrlN}    ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
 
     GIVEN Open Browser To Login Page  ${username}   ${password}   
     And I select merchant management and I fill merchant name  ${merchant_name}
-    And I fill data merchant information  ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${latitude}    ${longtitude}    ${email}    ${webUrl}    ${registerId}    ${tax}   ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
-    And I save draft data th-juristic
+    And I fill data merchant information  ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}    ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
+    And I save draft data fo-juristic
     When I must see merchant list after save draft   ${merchant_name}
-    And I fill data merchant information  ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${latitudeN}    ${longtitudeN}    ${emailN}    ${webUrlN}    ${registerIdN}    ${taxN}   ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
+    And I fill data merchant information  ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${emailN}    ${webUrlN}    ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
     And I fill merchant with effective date
-    And I save draft data th-juristic
+    And I save draft data fo-juristic
     Then I must see merchant list after save draft   ${merchant_name}
-    And I check data after edit  ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${latitudeN}    ${longtitudeN}    ${emailN}    ${webUrlN}    ${registerIdN}    ${taxN}    ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
+    And I check data after edit  ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${emailN}    ${webUrlN}    ${authorizedPerson0N}    ${authorizedPersonId0N}    ${authorizedPersonAddress0N}   ${authorizedPerson1N}    ${authorizedPersonId1N}    ${authorizedPersonAddress1N}
 
     
 Open Browser To Login Page
@@ -54,11 +59,11 @@ I select merchant management and I fill merchant name
     Wait Until Element Is Visible   id=btn-addMerchant    timeout=15s
     Click Button  id=btn-addMerchant
     input text  id=input-merchantName  ${merchant_name}
-    Execute JavaScript    document.getElementById("businessType1").click()
+    Execute JavaScript    document.getElementById("businessType3").click()
     Wait Until Element Is Visible   id=btn-add    timeout=15s
     Click Button  id=btn-add
 
-I save draft data th-juristic
+I save draft data fo-juristic
     Execute JavaScript    window.scrollTo(0,0)
     # ปุ่ม Save
     Wait Until Element Is Visible  id=btn-saveDraft  timeout=5s
@@ -115,13 +120,15 @@ I fill merchant with effective date
     Execute JavaScript    window.scrollTo(0,0)
     click element    css=#display-right-icon > div > div:nth-child(4) > div > div > div > h5
     sleep    1
-    ${test}    select_advanceDate  ${6}
+    ${date}    select_advanceDate  ${5}
+    ${date2} =  Get Current Date  result_format='%d/%m/%Y
+    log to console  ${date2}
 
 
     
 
 I fill data merchant information
-    [Arguments]   ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${latitude}    ${longtitude}    ${email}    ${webUrl}    ${registerId}    ${tax}    ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
+    [Arguments]   ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}    ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
     # Page Should Contain  ${merchant_name}
 
     # Wait Until Element Is Visible  id=button-display-merchantTitle
@@ -133,7 +140,7 @@ I fill data merchant information
     sleep  2s
     Wait Until Element Is Visible  id=display-businessType
     ${getbustype}=  Get Text  id=display-businessType
-    Should Be Equal As Strings      ${getbustype}       ไทย-นิติบุคคล
+    Should Be Equal As Strings      ${getbustype}       ต่างชาติ-นิติบุคคล
 
     # กรอก merchant short name
     input text  id=input-merchantName  ${mer_short_name}
@@ -147,13 +154,8 @@ I fill data merchant information
     Select From List By Value  id=selectGroup-businessType  ${selectBusinessType}
 
     input text  id=input-businessType  ${businessType}
-    input text  id=input-latitude  ${latitude}
-    input text  id=input-longitude  ${longtitude}
     input text  id=input-email  ${email}
     input text  id=input-webUrl  ${webUrl}
-    input text  id=input-registerId  ${registerId}
-    Execute JavaScript    document.getElementById("${tax}").click()
-
                   
     input text  id=input-authorizedPerson0  ${authorizedPerson0}
     input text  id=input-authorizedPersonId0  ${authorizedPersonId0}
@@ -173,11 +175,11 @@ I fill data merchant information
 
 
 I check data after edit
-    [Arguments]   ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${latitudeN}    ${longtitudeN}    ${emailN}    ${webUrlN}    ${registerIdN}    ${taxN}    ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
+    [Arguments]   ${merchant_nameN}   ${titleN}   ${mer_short_nameN}    ${registerNameN}    ${productNameN}  ${businessTypeN}    ${selectBusinessTypeN}    ${emailN}    ${webUrlN}     ${authorizedPerson0}    ${authorizedPersonId0}    ${authorizedPersonAddress0}   ${authorizedPerson1}    ${authorizedPersonId1}    ${authorizedPersonAddress1}
     sleep  6s
     Wait Until Element Is Visible  id=display-businessType
     ${getbustypeN}=  Get Text  id=display-businessType
-    Should Be Equal As Strings  ${getbustypeN}  ไทย-นิติบุคคล
+    Should Be Equal As Strings  ${getbustypeN}  ต่างชาติ-นิติบุคคล
 
      # เทียบค่าmer short name
 
@@ -208,14 +210,6 @@ I check data after edit
     ${get_input_businesstype}=  Get Value  id=input-businessType
     Should Be Equal As Strings  ${get_input_businesstype}  ${businessTypeN}
 
-    Wait Until Element Is Visible  id=input-latitude
-    ${getlatitude}=  Get Value  id=input-latitude
-    Should Be Equal As Strings  ${getlatitude}  ${latitudeN}
-
-    Wait Until Element Is Visible  id=input-longitude
-    ${getlongitude}=  Get Value  id=input-longitude
-    Should Be Equal As Strings  ${getlongitude}  ${longtitudeN}
-
     Wait Until Element Is Visible  id=input-email
     ${get_email}=  Get Value  id=input-email
     Should Be Equal As Strings  ${get_email}  ${emailN}
@@ -223,10 +217,6 @@ I check data after edit
     Wait Until Element Is Visible  id=input-webUrl
     ${get_webUrl}=  Get Value  id=input-webUrl
     Should Be Equal As Strings  ${get_webUrl}  ${webUrlN}
-
-    Wait Until Element Is Visible  id=input-registerId
-    ${get_register}=  Get Value  id=input-registerId
-    Should Be Equal As Strings  ${get_register}  ${registerIdN}
 
     Wait Until Element Is Visible  id=input-authorizedPerson0
     ${get_authorizedPerson0}=  Get Value  id=input-authorizedPerson0

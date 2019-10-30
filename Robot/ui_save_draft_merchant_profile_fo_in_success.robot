@@ -23,11 +23,11 @@ Create merchant profile ui of fo-individual information
     [Arguments]   ${username}   ${password}   ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}  ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}
     # And I fill merchant information  ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}   ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}
     GIVEN Open Browser To Login Page  ${username}   ${password}
-    And I select merchant management 
-    And I fill merchant name  ${merchant_name}
-    And I fill merchant information  ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}   ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}
-    When I save draft data fo-individual
-    Then I must see merchant list after save draft
+    AND I select merchant management 
+    AND I fill merchant name  ${merchant_name}
+    AND I fill merchant information  ${merchant_name}   ${title}   ${mer_short_name}    ${registerName}    ${productName}   ${businessType}    ${selectBusinessType}    ${email}    ${webUrl}
+    WHEN I save draft data fo-individual
+    THEN I must see merchant list after save draft
 
 Open Browser To Login Page
     [Arguments]   ${username}   ${password}

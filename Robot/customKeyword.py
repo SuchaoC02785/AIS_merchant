@@ -6,9 +6,9 @@ def select_advanceDate(date) :
     keyboard = Controller() 
     # date = 6
     
-    for i in range(date):
+    for i in range(date+1):
         time.sleep(1) 
-        if i == date-1:
+        if i == date:
             keyboard.press(Key.enter)
         else:
             keyboard.press(Key.right)
